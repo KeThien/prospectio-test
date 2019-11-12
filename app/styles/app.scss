@@ -5,20 +5,22 @@
   position: relative;
   display: flex;
   margin: 0 auto;
+  width: 100px;
+  height: 200px;
   
   .vertical-line {
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    height: 200px;
+    height: 100%;
     width: 2px;
     background-color: #14a2fd;
     opacity: 0.2;
   }
   .button-create-new {
-    height: 32px;
-    width: 32px;
+    height: 0px;
+    width: 0px;
     opacity: 0;
     border: 3px solid #14a2fd;
     border-radius: 50%;
@@ -30,9 +32,9 @@
     font-size: 18px;
     top: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(0);
     color: #14a2fd;
-    transition: .3s all ease-in-out;
+    transition: .3s transform ease-in-out;
     &:hover {
       background-color: #14a2fd;
       color: #fff;
@@ -41,6 +43,8 @@
       height: 32px;
       width: 32px;
       opacity: 1;
+      transition: .3s transform ease-in-out;
+      transform: translateX(-50%) scale(1);
     }
   }
   .new-panel {
