@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="content timeline">
+    <div class="vertical-line">
+    </div>
+    <div class="button-create-new {{if this.isShown "is-shown"}}" onclick={{action "toggleNew"}}>
+      <FaIcon @icon="plus" />
+    </div>
+    <div class="new-panel {{if this.isClicked "is-open"}}">
+      <div class="panel panel-1">
+        <button> <FaIcon @icon="quote-right" /> Text</button>
+        <button><FaIcon @icon="link" /> Link</button>
+      </div>
+      <div class="panel panel-2">
+        <button><FaIcon @icon="image" /> Image</button>
+        <button><FaIcon @icon="puzzle-piece" /> Multiple choice</button>
+      </div>
+      <div class="panel panel-3">
+        <button><FaIcon @icon="video" /> Video</button>
+        <button><FaIcon @icon="puzzle-piece" /> Matching quiz</button>
+      </div>
+      <div class="panel panel-4">
+        <button><FaIcon @icon="volume-up" /> Audio</button>
+        <button><FaIcon @icon="bookmark" /> Did you know?</button>
+      </div>
+      <div class="panel panel-5">
+        <button><FaIcon @icon="comments" /> Forum</button>
+        <button><FaIcon @icon="book-open" /> Heading</button>
+      </div>
+    </div>
+  </div>
+</div>
